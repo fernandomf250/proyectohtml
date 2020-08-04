@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!--agrego un icono-->
+    <link rel="shortcut icon" href="images/imagenes-proyecto/moto.png" />
+    <!--Agrego el titulo-->
+    <title>Delivery</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link
+      href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script type="application/x-javascript">
+      addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+    </script>
+    <script src="js/jquery.min.js"></script>
+    <!--start slider -->
+    <link rel="stylesheet" href="css/fwslider.css" media="all" />
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/fwslider.js"></script>
+    <!--end slider -->
+  </head>
+  <body>
+    <div class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="header-left">
+              <div class="logo">
+                <a href="index.html"
+                  ><img
+                    class="ico-moto"
+                    src="images/imagenes-proyecto/moto.png"
+                    alt="Icono"
+                /></a>
+              </div>
+              <!--Creo mi barra de navegacion-->
+
+              <div class="menu">
+                <a class="toggleMenu" href="#"
+                  ><img src="images/nav.png" alt=""
+                /></a>
+                <ul class="nav" id="nav">
+                  <li><a href="tienda.html">Tienda</a></li>
+                  <li><a href="contactanos.html">Contactanos</a></li>
+                  <div class="clear"></div>
+                </ul>
+                <script
+                  type="text/javascript"
+                  src="js/responsive-nav.js"
+                ></script>
+              </div>
+              <!--termina la barra de navegacion-->
+
+              <div class="clear"></div>
+            </div>
+            <div class="header_right">
+              <!-- Inicio de barra de busqueda-->
+              <div class="search-box">
+                <div id="sb-search" class="sb-search">
+                  <form>
+                    <input
+                      class="sb-search-input"
+                      placeholder="Ingrese un termino de busqueda"
+                      type="search"
+                      name="search"
+                      id="search"
+                    />
+                    <input class="sb-search-submit" type="submit" value="" />
+                    <span class="sb-icon-search"> </span>
+                  </form>
+                </div>
+              </div>
+              <!----search-scripts---->
+              <script src="js/classie.js"></script>
+              <script src="js/uisearch.js"></script>
+              <script>
+                new UISearch(document.getElementById("sb-search"));
+              </script>
+              <!----//search-scripts---->
+
+              <ul class="icon1 sub-icon1 profile_img">
+                <li>
+                  <a class="active-icon c1" href="#"> </a>
+                  <ul class="sub-icon1 list">
+                    <div class="clear"></div>
+                    <div class="login_buttons">
+                      <div id="listar"></div>
+                      <div class="check_button">
+                        <a href="revisar.html">Revisar</a>
+                      </div>
+                      <div class="login_button">
+                        <a href="login.html">Iniciar Session</a>
+                      </div>
+                      <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                  </ul>
+                </li>
+              </ul>
+              <div class="clear"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--inicia body-->
+
+    <div class="container">
+      <div class="row">
+        <div class="tiltulo">
+          <h2 class="text-center">Realizar compra</h2>
+        </div>
+        <form>
+          <div class="form-row"></div>
+          <div class="form-group col-md-12">
+            <label for="inputAddress">Nombre</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputAddress"
+              placeholder="Hugo"
+            />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputState">Ciudad</label>
+              <select id="inputState" class="form-control">
+                <option selected>Seleccione...</option>
+                <option>Moyobamba</option>
+                <option>Tarapoto</option>
+              </select>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputZip">Telefono</label>
+              <input type="number" class="form-control" id="inputZip" />
+            </div>
+          </div>
+
+          <div class="form-group col-md-12">
+            <label for="inputAddress2">Direccion</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputAddress2"
+              placeholder="jr.independencia #321"
+            />
+          </div>
+          <div></div>
+          <div id="listacompra"></div>
+
+          <div class="text-center">
+            <button type="submit" class="btn btn-dark">Comprar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!--termina body-->
+
+    <!--inicia flooter-->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <ul class="footer_box">
+              <h4>Productos</h4>
+              <li><a href="#">Comida regional</a></li>
+              <li><a href="#">Comida Chifa</a></li>
+              <li><a href="#">Comida rapida</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <ul class="footer_box">
+              <h4>Acerca de</h4>
+              <li><a href="#">Empleos</a></li>
+              <li><a href="#">Tiendas</a></li>
+              <li><a href="#">Amigos</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <ul class="footer_box">
+              <h4>Atencion al clientet</h4>
+              <li><a href="#">Contactanos</a></li>
+              <li><a href="#">Envio de pedidos</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <ul class="footer_box">
+              <h4>BOLETIN INFORMATIVO</h4>
+              <div class="footer_search">
+                <form>
+                  <input
+                    type="text"
+                    value="Envianos un mensaje"
+                    onfocus="this.value = '';"
+                    onblur="if (this.value == '') {this.value = 'Enter your email';}"
+                  />
+                  <input type="submit" value="Vamos" />
+                </form>
+              </div>
+              <ul class="social">
+                <li class="facebook">
+                  <a href="#"><span> </span></a>
+                </li>
+                <li class="twitter">
+                  <a href="#"><span> </span></a>
+                </li>
+                <li class="instagram">
+                  <a href="#"><span> </span></a>
+                </li>
+                <li class="pinterest">
+                  <a href="#"><span> </span></a>
+                </li>
+                <li class="youtube">
+                  <a href="#"><span> </span></a>
+                </li>
+              </ul>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/carrito.js"></script>
+  </body>
+</html>

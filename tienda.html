@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!--agrego un icono-->
+    <link rel="shortcut icon" href="images/imagenes-proyecto/moto.png" />
+    <!--Agrego el titulo-->
+    <title>Delivery</title>
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <link
+      href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="css/fwslider.css" media="all" />
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+    <script type="application/x-javascript">
+      addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+    </script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/fwslider.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/uisearch.js"></script>
+
+    <script>
+      new UISearch(document.getElementById("sb-search"));
+    </script>
+  </head>
+  <body>
+    <div class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="header-left">
+              <div class="logo">
+                <a href="index.html"
+                  ><img
+                    class="ico-moto"
+                    src="images/imagenes-proyecto/moto.png"
+                    alt="Icono"
+                /></a>
+              </div>
+              <!--Creo mi barra de navegacion-->
+
+              <div class="menu">
+                <a class="toggleMenu" href="#"
+                  ><img src="images/nav.png" alt=""
+                /></a>
+                <ul class="nav" id="nav">
+                  <li><a href="tienda.html">Tienda</a></li>
+                  <li><a href="contactanos.html">Contactanos</a></li>
+                  <div class="clear"></div>
+                </ul>
+                <script
+                  type="text/javascript"
+                  src="js/responsive-nav.js"
+                ></script>
+              </div>
+              <!--termina la barra de navegacion-->
+
+              <div class="clear"></div>
+            </div>
+            <div class="header_right">
+              <!-- Inicio de barra de busqueda-->
+              <div class="search-box">
+                <div id="sb-search" class="sb-search">
+                  <form>
+                    <input
+                      class="sb-search-input"
+                      placeholder="Ingrese un termino de busqueda"
+                      type="search"
+                      name="search"
+                      id="search"
+                    />
+                    <input class="sb-search-submit" type="submit" value="" />
+                    <span class="sb-icon-search"> </span>
+                  </form>
+                </div>
+              </div>
+              <ul class="icon1 sub-icon1 profile_img">
+                <li>
+                  <a class="active-icon c1" href="#"> </a>
+                  <ul class="sub-icon1 list">
+                    <div class="login_buttons">
+                      <div id="listar"></div>
+                      <div class="check_button">
+                        <a href="revisar.html">Revisar</a>
+                      </div>
+                      <div class="login_button">
+                        <a href="login.html">Iniciar Session</a>
+                      </div>
+                    </div>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--inicia el cuerpo-->
+    <div class="main">
+      <div class="shop_top">
+        <div class="container">
+          <div class="row shop_box-top">
+            <!--prdoucto1-->
+            <div class="col-md-3 shop_box">
+              <a href="#">
+                <img
+                  src="images/imagenes-proyecto/paparellena.jpg"
+                  class="img-responsive"
+                  id="plato1img"
+                  alt=""
+                />
+                <div class="shop_desc">
+                  <h3>
+                    <a href="#" class="paparellena" id="plato1nombre"
+                      >Papa Rellena</a
+                    >
+                  </h3>
+                  <p>Papa cocinada rellena de mescla especial y frita</p>
+
+                  <span class="4.00" id="plato1precio">$4.00</span><br />
+                  <ul class="buttons">
+                    <li class="cart">
+                      <a id="botplato1">Añadir al carrido</a>
+                    </li>
+                    <div class="clear"></div>
+                  </ul>
+                </div>
+              </a>
+            </div>
+            <!--producto2-->
+            <div class="col-md-3 shop_box">
+              <a href="#">
+                <img
+                  src="images/imagenes-proyecto/aeropuerto.jpg"
+                  id="plato2img"
+                  class="img-responsive"
+                  alt=""
+                />
+
+                <div class="shop_desc">
+                  <h3>
+                    <a href="#" class="Aeropuerto" id="plato2nombre"
+                      >Aeropuerto</a
+                    >
+                  </h3>
+                  <p>Arroz Chaufa especial con fideos chinos</p>
+                  <span class="15.00" id="plato2precio">$15.00</span><br />
+                  <ul class="buttons">
+                    <li class="cart">
+                      <a id="botplato2">Añadir al carrido</a>
+                    </li>
+                    <div class="clear"></div>
+                  </ul>
+                </div>
+              </a>
+            </div>
+            <!--producto 3-->
+            <div class="col-md-3 shop_box">
+              <a href="#">
+                <img
+                  src="images/imagenes-proyecto/sopa-de-pollo.jpg"
+                  id="plato3img"
+                  class="img-responsive"
+                  alt=""
+                />
+
+                <div class="shop_desc">
+                  <h3>
+                    <a href="#" class="Sopa de pollo" id="plato3nombre"
+                      >Sopa de pollo</a
+                    >
+                  </h3>
+                  <p>Sopa especial de pollo de chacra y huevos cocinados</p>
+                  <span class="7.00" id="plato3precio">$7.00</span><br />
+                  <ul class="buttons">
+                    <li class="cart">
+                      <a id="botplato3">Añadir al carrido</a>
+                    </li>
+                    <div class="clear"></div>
+                  </ul>
+                </div>
+              </a>
+            </div>
+            <!--producto 4-->
+            <div class="col-md-3 shop_box">
+              <a href="#">
+                <img
+                  src="images/imagenes-proyecto/taiche-frito.jpg"
+                  id="plato4img"
+                  class="img-responsive"
+                  alt=""
+                />
+
+                <div class="shop_desc">
+                  <h3>
+                    <a href="#" class="Paiche frito" id="plato4nombre"
+                      >Paiche frito</a
+                    >
+                  </h3>
+                  <p>Paciche seco frito con deliciosos patacones y ensalada</p>
+                  <span class="12.00" id="plato4precio">$12.00</span><br />
+                  <ul class="buttons">
+                    <li class="cart">
+                      <a id="botplato4">Añadir al carrido</a>
+                    </li>
+                    <div class="clear"></div>
+                  </ul>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="row">
+            <!--producto 5-->
+            <div class="col-md-3 shop_box">
+              <a href="#">
+                <img
+                  src="images/imagenes-proyecto/Arroz-chaufa.jpg"
+                  id="plato5img"
+                  class="img-responsive"
+                  alt=""
+                />
+
+                <div class="shop_desc">
+                  <h3>
+                    <a href="#" class="Arroz Chaufa" id="plato5nombre"
+                      >Arroz Chaufa</a
+                    >
+                  </h3>
+                  <p>Arroz chaufa tradicional con receta especial de la zona</p>
+                  <span class="12.00" id="plato5precio">$12.00</span><br />
+                  <ul class="buttons">
+                    <li class="cart">
+                      <a id="botplato5">Añadir al carrido</a>
+                    </li>
+                    <div class="clear"></div>
+                  </ul>
+                </div>
+              </a>
+            </div>
+            <!--producto6-->
+            <div class="col-md-3 shop_box">
+              <a href="">
+                <img
+                  src="images/imagenes-proyecto/juane.jpg" id="plato6img"
+                  class="img-responsive"
+                  alt="#"
+                />
+
+                <div class="shop_desc">
+                  <h3><a href="#" class="Juane" id="plato6nombre">Juane</a></h3>
+                  <p>Juane tradiconal de arroz con pollo y maduro frito</p>
+                  <span class="5.00"  id="plato6precio">$5.00</span><br />
+                  <ul class="buttons">
+                    <li class="cart"><a id="botplato6">Añadir al carrido</a></li>
+                    <div class="clear"></div>
+                  </ul>
+                </div>
+              </a>
+            </div>
+            <!--producto 7-->
+            <div class="col-md-3 shop_box">
+              <a href="#">
+                <img
+                  src="images/imagenes-proyecto/aji-de-gallina.jpg" id="plato7img"
+                  class="img-responsive"
+                  alt=""
+                />
+
+                <div class="shop_desc">
+                  <h3><a href="#" class="Aji de gallina" id="plato7nombre" >Aji de gallina</a></h3>
+                  <p>Aji de gallina muy rico con arroz especial</p>
+                  <span class="9.00" id="plato7precio">$9.00</span><br />
+                  <ul class="buttons">
+                    <li class="cart"><a id="botplato7">Añadir al carrido</a></li>
+                    <div class="clear"></div>
+                  </ul>
+                </div>
+              </a>
+            </div>
+            <!--producto 8-->
+            <div class="col-md-3 shop_box">
+              <img
+                src="images/imagenes-proyecto/pollo.jpg" id="plato8img"
+                class="img-responsive"
+                alt=""
+              />
+
+              <div class="shop_desc">
+                <h3><a href="#" class="Pollo a la braza" id="plato8nombre">Pollo a la Braza</a></h3>
+                <p>tradicional pollo a la braza con papas fritas</p>
+                <span class="12.00" id="plato8precio">$12.00</span><br />
+                <ul class="buttons">
+                  <li class="cart"><a id="botplato8">Añadir al carrido</a></li>
+                  <div class="clear"></div>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--termina el cuerpo-->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <ul class="footer_box">
+              <h4>Productos</h4>
+              <li><a href="#">Comida regional</a></li>
+              <li><a href="#">Comida Chifa</a></li>
+              <li><a href="#">Comida rapida</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <ul class="footer_box">
+              <h4>Acerca de</h4>
+              <li><a href="#">Empleos</a></li>
+              <li><a href="#">Tiendas</a></li>
+              <li><a href="#">Amigos</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <ul class="footer_box">
+              <h4>Atencion al cliente</h4>
+              <li><a href="#">Contactanos</a></li>
+              <li><a href="#">Envio de pedidos</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <ul class="footer_box">
+              <h4>BOLETIN INFORMATIVO</h4>
+              <div class="footer_search">
+                <form>
+                  <input
+                    type="text"
+                    value="Envianos un mensaje"
+                    onfocus="this.value = '';"
+                    onblur="if (this.value == '') {this.value = 'Envianos un mensaje';}"
+                  />
+                  <input type="submit" value="Vamos" />
+                </form>
+              </div>
+              <ul class="social">
+                <li class="facebook">
+                  <a href="#"><span> </span></a>
+                </li>
+                <li class="twitter">
+                  <a href="#"><span> </span></a>
+                </li>
+                <li class="instagram">
+                  <a href="#"><span> </span></a>
+                </li>
+                <li class="pinterest">
+                  <a href="#"><span> </span></a>
+                </li>
+                <li class="youtube">
+                  <a href="#"><span> </span></a>
+                </li>
+              </ul>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/carrito.js"></script>
+  </body>
+</html>
