@@ -90,9 +90,9 @@
                 <li>
                   <a class="active-icon c1" href="#"> </a>
                   <ul class="sub-icon1 list">
-                    <div class="clear"></div>
+                    
                     <div class="login_buttons">
-                      <div id="listar"></div>
+                      <div id="listar" class="cosita2"></div>
                       <div class="check_button">
                         <a href="revisar.html">Revisar</a>
                       </div>
@@ -114,7 +114,7 @@
 
     <!--inicia body-->
 
-    <div class="container">
+    <div class="container ">
       <div class="row">
         <div class="tiltulo">
           <h2 class="text-center">Realizar compra</h2>
@@ -146,20 +146,27 @@
             </div>
           </div>
 
-          <div class="form-group col-md-12">
-            <label for="inputAddress2">Direccion</label>
-            <input
-              type="text"
-              class="form-control"
-              id="inputAddress2"
-              placeholder="jr.independencia #321"
-            />
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputState">Metodo de pago</label>
+              <select id="inputState" class="form-control">
+                <option selected>Seleccione...</option>
+                <option>Contrapago</option>
+                <option>tarjeta</option>
+              </select>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputZip">Direccion</label>
+              <input type="text" class="form-control" id="inputZip" placeholder="jr.independencia #321"/>
+            </div>
           </div>
+
+          
           <div></div>
-          <div id="listacompra"></div>
+          <div id="listacompra" class="cosita"></div>
 
           <div class="text-center">
-            <button type="submit" class="btn btn-dark">Comprar</button>
+            <button type="submit" class="btn btn-dark" >Comprar</button>
           </div>
         </form>
       </div>

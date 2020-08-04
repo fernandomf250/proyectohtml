@@ -12,7 +12,7 @@ $("#botplato2").click(function () {
   var nombre = $("#plato2nombre").attr("class"); /*saco el atributo id*/
   var precio = $("#plato2precio").attr("class");
 
-  alert(img, nombre, precio);
+  alert("Se agrego al carrito");
   AgregarCarrito(img, nombre, precio); /*envio*/
 });
 
@@ -21,7 +21,7 @@ $("#botplato3").click(function () {
   var nombre = $("#plato3nombre").attr("class"); /*saco el atributo id*/
   var precio = $("#plato3precio").attr("class");
 
-  alert(img, nombre, precio);
+  alert("Se agrego al carrito");
   AgregarCarrito(img, nombre, precio); /*envio*/
 });
 
@@ -30,7 +30,7 @@ $("#botplato4").click(function () {
   var nombre = $("#plato4nombre").attr("class"); /*saco el atributo id*/
   var precio = $("#plato4precio").attr("class");
 
-  alert(img, nombre, precio);
+  alert("Se agrego al carrito");
   AgregarCarrito(img, nombre, precio); /*envio*/
 });
 
@@ -39,7 +39,7 @@ $("#botplato5").click(function () {
   var nombre = $("#plato5nombre").attr("class"); /*saco el atributo id*/
   var precio = $("#plato5precio").attr("class");
 
-  alert(img, nombre, precio);
+  alert("Se agrego al carrito");
   AgregarCarrito(img, nombre, precio); /*envio*/
 });
 
@@ -48,7 +48,7 @@ $("#botplato6").click(function () {
   var nombre = $("#plato6nombre").attr("class"); /*saco el atributo id*/
   var precio = $("#plato6precio").attr("class");
 
-  alert(img, nombre, precio);
+  alert("Se agrego al carrito");
   AgregarCarrito(img, nombre, precio); /*envio*/
 });
 
@@ -57,7 +57,7 @@ $("#botplato7").click(function () {
   var nombre = $("#plato7nombre").attr("class"); /*saco el atributo id*/
   var precio = $("#plato7precio").attr("class");
 
-  alert(img, nombre, precio);
+  alert("Se agrego al carrito");
   AgregarCarrito(img, nombre, precio); /*envio*/
 });
 
@@ -66,7 +66,7 @@ $("#botplato8").click(function () {
   var nombre = $("#plato8nombre").attr("class"); /*saco el atributo id*/
   var precio = $("#plato8precio").attr("class");
 
-  alert(img, nombre, precio);
+  alert("Se agrego al carrito");
   AgregarCarrito(img, nombre, precio); /*envio*/
 });
 
@@ -94,26 +94,49 @@ function AgregarCarrito(img, nombre, precio) {
 
 
 function listarCitas() {
-    var dbCitas = localStorage.getItem("carrito"); //Obtener datos de localStorage
-    dbCitas = JSON.parse(dbCitas); // Covertir a objeto
-    for (var i in dbCitas) {
-        var d = JSON.parse(dbCitas[i]);
-        $("#listar").append(
-            "<img src="+d.img+"> </img>"+
-            "<tr>" +
+    
+  var dbCitas = localStorage.getItem("carrito"); //Obtener datos de localStorage
+  dbCitas = JSON.parse(dbCitas); // Covertir a objeto
 
-            "<td>" + i + "</td>" +
-            "<td>" + d.nombre + "</td>" +
-            "<td>" + d.precio + "</td>" +
+  $("#listar").html(
+      "<table>"+
+      "<thead>" +
+      "<tr>" +
 
-            
-            "<td> <a id='" + i + "' class='btnEliminar' href='#'> Eliminar </a> </td>" +
-            "</tr>"+
-             "</tbody>"+
-            "</table>"
-        );
-    }
+      "<th> Imagen </th>" +
+      "<th> Nombre </th>" +   
+      "<th> Precio </th>" +
 
+    
+      "<th> Acciones </th>" +
+      "</tr>" +
+      "</thead>" +
+      "<tbody>"
+     
+
+  );
+
+  for (var i in dbCitas) {
+      var d = JSON.parse(dbCitas[i]);
+      $("#listar").append(
+          
+          
+          "<tr>" +
+
+          "<td> <img width='50px' src="+d.img+"></img> </td>" +
+          "<td>"+ d.nombre + "</td>" +
+          "<td>" + d.precio + "</td>" +
+
+          
+          "<td> <a id='" + i + "' class='btnEliminar' href='#'> X </a> </td>" +
+          "</tr>"
+      );
+  }
+
+  $("#listar").append(
+     "</tbody>"+
+    "</table>"
+);
 
 }
 listarCitas();
@@ -147,27 +170,32 @@ function listarcompra() {
             
             
             "<tr>" +
-
-            "<td>" + i + "</td>" +
-            "<img src="+d.img+"> </img>"+
+            "<td> <img width='130px' src="+d.img+"></img> </td>"+
             "<td>" + d.nombre + "</td>" +
             "<td>" + d.precio + "</td>" +
 
             
-            "<td> <a id='" + i + "' class='btnEliminar' href='#'> Eliminar </a> </td>" +
-            "</tr>"+
-             "</tbody>"+
-            "</table>"
+            "<td> <a id='" + i + "' class='btnEliminar' href='#'> X </a> </td>" +
+            "</tr>"
         );
     }
+
+        $("#listacompra").append(
+       "</tbody>"+
+      "</table>"
+       );
+
 }
 
 listarcompra();
 
 function Eliminar(e){
+  var dbCitas = localStorage.getItem("carrito"); //Obtener datos de localStorage
+  dbCitas = JSON.parse(dbCitas); // Covertir a objeto
+
   dbCitas.splice(e, 1); // Args (posición en el array, numero de items a eliminar) https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array
-  localStorage.setItem("dbCitas", JSON.stringify(dbCitas));
-  return Mensaje(2);
+  localStorage.setItem("carrito", JSON.stringify(dbCitas));
+  
 }
 
 
@@ -178,4 +206,5 @@ $(".btnEliminar").bind("click", function(){
   console.log(this);
   Eliminar(indice_selecionado); // Eliminamos el elemento llamando la funcion de eliminar
   listarCitas();
+  listarcompra();
 });

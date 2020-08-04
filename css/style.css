@@ -1959,3 +1959,16 @@ h4.m_11 {
 .titulo-re{
 	text-align: center;
 }
+
+.cosita{
+	align-items: center;
+	display: inline;
+	right: 50%;
+	line-height: 100px;
+}
+.cosita2{
+	align-items: center;
+	display: inline;
+	right: 50%;
+	line-height: 20px;
+}
